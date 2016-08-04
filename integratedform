@@ -18,12 +18,10 @@
 </head>
 <body>
 <!-- USERNAME INPUT -->
-  <form data-toggle="validator" role="form">
-    <div class="form-group">
+  <form role="form">
     <label for="inputName" class="control-label">Username</label> 
-    <input type="text" class="form-control username" id="inputUsername" placeholder="Username" required>        
+    <input type="text" class="username" id="inputUsername">        
       <div class="username-help-text help-block">
-      </div>
     </div>
   </form>
 <!-- PASSWORD INPUT 01 -->
