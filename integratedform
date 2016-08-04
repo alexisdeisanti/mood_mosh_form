@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Integration Test</title>
+<!--I added this Java Script link-->
+  <script src="javascript.js"></script>
+   <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+  <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+<!--ADDED FOR SUCCESSS MESSSAGE-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--ADDED FOR SUCCESSS MESSSAGE-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!-- USERNAME INPUT -->
+  <form data-toggle="validator" role="form">
+    <div class="form-group">
+    <label for="inputName" class="control-label">Username</label> 
+    <input type="text" class="form-control username" id="inputUsername" placeholder="Username" required>        
+      <div class="username-help-text help-block">
+      </div>
+    </div>
+  </form>
+<!-- PASSWORD INPUT 01 -->
+  <form id="myform">
+    <label for="password">Password</label>
+    <input  type="password" id="password" name="password" />
+    <!-- PASSWORD SWITCH CODE-->
+    <input type="checkbox" onchange= "document.getElementById('password').type= this.checked ? 'text' : 'password' ">
+        Show password<br/>
+  <!-- PASSWORD INPUT 02 -->
+    <label for="password_again">Again</label>
+    <input type="password" class="left" id="password_again" name="password_again" />
+
+    <!-- PASSWORD SWITCH CODE-->
+    <input type="checkbox" onchange= "document.getElementById('password_again').type= this.checked ? 'text' : 'password' ">Show password<br>
+  </form>
+<!-- EMAIL INPUT -->
+  <form>  
+    <label for="email">Enter an email address:</label>
+    <input id='email'>
+    <span id='result'></span>
+  </form>
+
+ 
+ <!--CODE FOR SUCCESS MESSAGE--> 
+    <!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">submit</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>SUCCESS</p><br> user account has been created
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--CODE FOR SUCCESS MESSAGE--> 
+
+
+<!--<input type="submit" value="Validate!">
+</form>-->
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+
+<script>
+ //Username Validation 
+    
+ var $usernameInput = $('.username')
+      var $usernameInputGroup = $usernameInput.parent()
+      var $usernameError = $('.username-help-text')
+      var blacklist = [
+        'ginger',
+        'lupe',
+        'quin',
+        'april',
+        'eden',
+        'kristin',
+        'nancy',
+        'janice',
+        'alexis'
+       ]
+
+      var usernameUsed = function (name) {
+        return blacklist.indexOf(name) > -1
+      }
+
+      var clearError = function () {
+        $usernameInputGroup.removeClass('has-error')
+        $usernameError.text('')
+      }
+
+      var setError = function () {
+        $usernameInputGroup.addClass('has-error')
+        $usernameError.text('the username: ' + $usernameInput.val() + ' is already taken.')
+      }
+
+      var updateUsername = function (e) {
+        // get my username
+        var username = $usernameInput.val()
+        // is my username unique
+        var usernameUnique = !usernameUsed(username)
+        if (usernameUnique) {
+        // if my username is unique, get rid all the errors
+          clearError()
+        } else {
+        // if isn't show me an error
+          setError()
+        }
+      }
+      $usernameInput.on('change', updateUsername)
+
+;
+//EMAIL SUFFIX VALIDATION
+  function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+function validate() {
+  $("#result").text("");
+  var email = $("#email").val();
+  if (validateEmail(email)) {
+    $("#result").text(email + " is valid :)");
+    $("#result");
+  } else {
+    $("#result").text(email + " is not valid :(");
+    $("#result");
+  }
+  return false;
+}
+
+$("form").bind("change", validate);
+    function checkbae(){
+        if (document.layers || document.getElementById || document.all)
+            return checkemail()
+        else
+            return true
+    }
+
+//PASSWORD LENGTH
+jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+});
+$( "#myform" ).validate({
+  rules: {
+    password: {
+      required: true,
+      minlength: 8,
+    },
+    password_again: {
+      equalTo: "#password",
+      required: true,
+      minlength: 8,
+    },
+  }
+});
+
+</script>
+</body>
+</html>
