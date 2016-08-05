@@ -341,10 +341,10 @@
         <div class="modal-footer">
          <!--CODE FOR SUCCESS MESSAGE--> 
     <!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">submit</button>
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySuccessModal">submit</button>
 
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
+<!-- Success Modal -->
+<div id="mySuccessModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
