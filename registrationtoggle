@@ -1,0 +1,111 @@
+<!-- <!Doctype HTML>
+<html>
+<head>
+<title>Toggle switch messing</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+<body>
+
+<label class="switch">
+  <input type="checkbox">
+  <div class="slider"></div>
+</label>
+
+Rounded switch
+<label class="switch">
+  <input type="checkbox">
+  <div class="slider round"></div>
+</label>
+
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTING BOOTSTRAP SWITCH </title>
+    <link href="bootstrap-switch-master/docs/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-switch-master/docs/css/highlight.css" rel="stylesheet">
+    <link href="bootstrap-switch-master/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/assets/css/docs.min.css" rel="stylesheet">
+    <link href="bootstrap-switch-master/docs/css/main.css" rel="stylesheet">
+  </head>
+  <body>
+  <h3>True or false?</h3>
+
+   <div> <input class="form-control" type="checkbox" checked="" name="true-false01" id="true-false01" data-on-text="True" data-off-text="False">
+    <label class="true-false" for="true-false01">I am responsible for most of the home decor decisions</label>
+    </div>
+<div>
+<div>
+    <input class="form-control" type="checkbox" checked="" name="true-false03" id="true-false03" data-on-text="True" data-off-text="False">
+    <label class="true-false" for="true-false03">I work and play in the same locations</label></div>
+    <input class="form-control" type="checkbox" checked="" name="true-false02" id="true-false02" data-on-text="True" data-off-text="False">
+    <label class="true-false" for="true-false02">I keep a very tight schedule with little room for variation</label></div>
+    <div>
+    <input class="form-control" type="checkbox" checked="" name="true-false04" id="true-false04" data-on-text="True" data-off-text="False">
+    <label class="true-false" for="true-false04">I'm up to date on trends related to fashion and design</label></div>
+  <h1>Relevant Interests</h1>
+  <i>Pick 8 interests that are relevant to you</i>
+    <div>
+      <input class="form-control interest interest01" type="checkbox"> <b>Modernism</b>
+    </div>
+    <div>
+      <input type="checkbox" class="interest interest02" type="checkbox"> <b>Hiking</b>
+    </div>
+        <div>
+      <input type="checkbox" class="interest interest03" type="checkbox"> <b>Romanticism</b>
+    </div>
+        <div>
+      <input type="checkbox" class="interest interest03" type="checkbox"> <b>The Ocean</b>
+    </div>
+        <div>
+      <input type="checkbox" class="interest interest04" type="checkbox"> <b>Technology and its Implications</b>
+    </div>
+        <div>
+      <input type="checkbox" class="interest interest05" type="checkbox"> <b>Dogs</b>
+    </div>
+        <div>
+      <input type="checkbox" class="interest interest06" type="checkbox"> <b>Cats</b>
+    </div>
+        <div>
+      <input type="checkbox" class="interest interest07" type="checkbox"> <b>The Current Golden Age of Television</b>
+    </div>
+        <div>
+      <input type="checkbox" class="interest interest08" type="checkbox"> <b>Spanish Colonial Revival Architecture</b>
+    </div>
+        <div>
+      <input type="checkbox" class="interest interest09" type="checkbox"> <b>Driving</b>
+    </div>
+        <div>
+      <input type="checkbox" class="interest interest10" type="checkbox"> <b>Movie Palaces from the Golden Era of Hollywood</b>
+    </div>
+        <div>
+      <input type="checkbox" class="interest interest11" type="checkbox"> <b>Techno</b>
+    </div>
+        <div>
+      <input type="checkbox" class="interest interest12" type="checkbox"> <b>Minimalism</b>
+    </div>
+        <div>
+      <input type="checkbox" class="interest interest13" type="checkbox"> <b>Food & Cooking</b>
+    </div>
+        <div>
+      <input type="checkbox" class="interest interest14" type="checkbox"> <b>Glitch Art</b>
+    </div>
+    <!-- <input id="destroy-switch" type="checkbox" checked=""> -->
+
+    <script src="bootstrap-switch-master/docs/js/jquery.min.js"></script>
+    <script src="bootstrap-switch-master/docs/js/bootstrap.min.js"></script>
+    <script src="bootstrap-switch-master/dist/js/bootstrap-switch.js"></script>
+    <script>
+   $(function(argument) {
+      $('[type="checkbox"]').bootstrapSwitch();
+      $('#destroy-switch').bootstrapSwitch('destroy');
+    })
+
+    </script>
+  </body>
+</html>
