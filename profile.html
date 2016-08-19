@@ -86,7 +86,7 @@
   <div class="container main">
   <div class="row">
     <div class="col-md-6">
-      <div id="profile">
+      <div id="profile" align="right">
       </div>
     </div>
     <div class="col-md-6">
@@ -96,44 +96,55 @@
     </h2>
     <h2 id="birthday">
     </h2>
-               <center> <div class="color" id="colordiv"></div>
-  </center></div>
-  <div class="row">
-<div class="col-md-6"> <p align="right"><b>Dream Vacation</b></p>
-<div id="dreamvaca" class="dreamvaca" align="right">
+   <center> <div class="color" id="colordiv"></div>
+  </center>
+  </div>
+  </div>
+
+<div class="row">
+<div class="col-md-6"> <p align="right"><b>Selections</b></p>
+<div id="spinner" class="spinner" align="right">
+<ul style="list-style-type:none; margin-left:-2em;">
+    <li id="1" class="hideable" style="display: block;"><div id="dreamvaca"></div></li>
+    <li id="2" class="hideable"><div id="living"></div></li>
+    <li id="3" class="hideable"><div id="lifest"></div></li>
+    
+    <!-- ... and so on -->
+</ul>
+<!-- Buttons to go back and forth between slides. -->
+
+
+<form>
+<input type="button" id="firstButton" value="First" onclick="goToEdge(false)" />
+<input type="button" value="Back" onclick="toggleSlide(false)" />
+<input id="pauseButton" onclick="toggleInterval()" type="button" value="Pause" />
+<input type="button" value="Forward" onclick="toggleSlide(true)" />
+<input type="button" id="lastButton" value="Last" onclick="goToEdge(true)" />
+
+</form>
 </div></div>
 <div class="col-md-6">
-<p><b>Lifestyle</b></p>
-<div id="lifest" class="lifest">
-
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-6" id="living" align="right">
-<p align="right"><b>Livingroom</b></p>
-
-</div>
 <h1 align="left">About Me</h1>
-<div class="col-md-6" id="aboutme"></div>
+<div id="aboutme"></div>
+<div id="aboutmemore"></div>
 <a id="toggleButton" onclick="toggleText();" href="javascript:void(0);">See More</a>
+</div>
+</div>
 
-</div>
+
+
+
 <div class="row">
-<div class="col-md-12" id="aboutmemore">
-</div>
-</div>
-<div class="row">
- <div class="col-md-6" align="right"><p><b>A True Statement:</b></p>
+ <div class="col-md-6" align="right"><p><b>True Statements</b></p>
                     <div class="truestatement" id="truestatement"></div>
                   </div>
                   <div class="col-md-6">
-                    <p><b>Interests:</b></p>
+                    <p><b>Interests</b></p>
                     <div class="interests" id="interests"></div>
 </div>
 </div>
-</div>
-</div>
+
+
   <!-- END OF MAIN CONTAINER -->
   </div>
   <!-- END OF MAIN CONTAINER -->
@@ -171,7 +182,13 @@
         </div>
       
     </footer>
-    
+
+
+
+
+
+
+
 
 
 
